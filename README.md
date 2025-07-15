@@ -1,5 +1,11 @@
 ### ok-script boilerplate
 
+### 使用方法
+```
+pip install -r requirements.txt #必须使用 python 3.12
+python main_debug.py 
+```
+
 #### 文件说明
 ```
 src/tasks/ 任务类
