@@ -25,7 +25,7 @@ config = {
         }
     },
     'windows': {  # required  when supporting windows game
-        'exe': 'ZenlessZoneZero.exe',
+        'exe': 'GenshinImpact.exe',
         # 'hwnd_class': 'UnrealWindow', #增加重名检查准确度
         'interaction': 'Genshin', #支持大多数PC游戏后台点击
         'can_bit_blt': True,  # default false, opengl games does not support bit_blt
@@ -49,6 +49,15 @@ config = {
     'analytics': {
         'report_url': 'http://report.ok-script.cn:8080/report', #上报日活, 可选
     },
+    'links': {
+            'default': {
+                'github': 'https://github.com/ok-oldking/ok-script-boilerplate',
+                'discord': 'https://discord.gg/vVyCatEBgA',
+                'sponsor': 'https://www.paypal.com/ncp/payment/JWQBH7JZKNGCQ',
+                'share': 'Download from https://github.com/ok-oldking/ok-script-boilerplate',
+                'faq': 'https://github.com/ok-oldking/ok-script-boilerplate'
+            }
+        },
     'screenshots_folder': "screenshots", #截图存放目录, 每次重新启动会清空目录
     'gui_title': 'ok-script-boilerplate',  # Optional
     # 'coco_feature_folder': get_path(__file__, 'assets/coco_feature'),  # required if using feature detection
