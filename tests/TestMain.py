@@ -1,7 +1,7 @@
 # Test case
 import unittest
 
-from config import config
+from src.config import config
 from ok.test.TaskTestCase import TaskTestCase
 
 from src.tasks.OneTimeTask import OneTimeTask
