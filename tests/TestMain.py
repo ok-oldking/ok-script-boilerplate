@@ -4,11 +4,11 @@ import unittest
 from src.config import config
 from ok.test.TaskTestCase import TaskTestCase
 
-from src.tasks.OneTimeTask import OneTimeTask
+from src.tasks.MyOneTimeTask import MyOneTimeTask
 
 
-class TestBattleBaseSerialization(TaskTestCase):
-    task_class = OneTimeTask
+class TestMyOneTimeTask(TaskTestCase):
+    task_class = MyOneTimeTask
 
     config = config
 

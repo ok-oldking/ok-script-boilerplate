@@ -2,7 +2,7 @@ import re
 
 from ok import BaseTask
 
-class OneTimeTask(BaseTask):
+class MyOneTimeTask(BaseTask):
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
