@@ -1,5 +1,5 @@
 import ok
-from config import config
+import src.config import config
 
 if __name__ == '__main__':
     config = config

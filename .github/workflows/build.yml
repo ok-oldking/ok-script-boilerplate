@@ -63,7 +63,7 @@ jobs:
         uses: ok-oldking/partial-sync-repo@master # Replace with your action path
         with:
           repos: |
-            https://cnb:${{ secrets.CNB_TOKEN }}@cnb.cool/ok-oldking/ok-gf2.git
+            https://github.com/ok-oldking/ok-boilerplate-update.git
           sync_list: 'deploy.txt'
           tag: ${{ github.ref_name }}
           gitignore_file: '.update_repo_gitignore'
