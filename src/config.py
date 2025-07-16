@@ -1,5 +1,6 @@
 import os
 
+import numpy as np
 from ok import ConfigOption
 
 version = "dev"
@@ -11,11 +12,46 @@ key_config_option = ConfigOption('Game Hotkey Config', { #全局配置示例
     'Tool Key': 't',
 }, description='In Game Hotkey for Skills')
 
+
+def make_bottom_right_black(frame):
+    """
+    Changes a portion of the frame's pixels at the bottom right to black.
+
+    Args:
+        frame: The input frame (NumPy array) from OpenCV.
+
+    Returns:
+        The modified frame with the bottom-right corner blackened.  Returns the original frame
+        if there's an error (e.g., invalid frame).
+    """
+    try:
+        height, width = frame.shape[:2]  # Get height and width
+
+        # Calculate the size of the black rectangle
+        black_width = int(0.13 * width)
+        black_height = int(0.025 * height)
+
+        # Calculate the starting coordinates of the rectangle
+        start_x = width - black_width
+        start_y = height - black_height
+
+        # Create a black rectangle (NumPy array of zeros)
+        black_rect = np.zeros((black_height, black_width, frame.shape[2]), dtype=frame.dtype)  # Ensure same dtype
+
+        # Replace the bottom-right portion of the frame with the black rectangle
+        frame[start_y:height, start_x:width] = black_rect
+
+        return frame
+    except Exception as e:
+        print(f"Error processing frame: {e}")
+        return frame
+
 config = {
     'debug': False,  # Optional, default: False
     'use_gui': True,
     'config_folder': 'configs',
     'global_configs': [key_config_option],
+    'screenshot_processor': make_bottom_right_black, # 在截图的时候对frame进行修改, 可选
     'gui_icon': 'icons/icon.png',
     'wait_until_before_delay': 0,
     'wait_until_check_delay': 0,
@@ -27,7 +63,7 @@ config = {
         }
     },
     'windows': {  # required  when supporting windows game
-        'exe': 'GenshinImpact.exe',
+        'exe': 'StarRail.exe',
         # 'hwnd_class': 'UnrealWindow', #增加重名检查准确度
         'interaction': 'Genshin', #支持大多数PC游戏后台点击
         'can_bit_blt': True,  # default false, opengl games does not support bit_blt

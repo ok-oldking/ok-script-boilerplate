@@ -2,7 +2,10 @@ import re
 
 from ok import BaseTask
 
-class MyOneTimeTask(BaseTask):
+from src.tasks.MyBaseTask import MyBaseTask
+
+
+class MyOneTimeTask(MyBaseTask):
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
@@ -22,7 +25,8 @@ class MyOneTimeTask(BaseTask):
     def run(self):
         self.log_info('日常任务开始运行!', notify=True)
         self.click(0.47, 0.60)
-        self.sleep(5)
+        self.sleep(1)
+        self.run_for_5()
         self.log_info('日常任务运行完成!', notify=True)
 
     def find_some_text_on_bottom_right(self):
@@ -36,5 +40,19 @@ class MyOneTimeTask(BaseTask):
 
     def test_find_feature_list(self):
         return self.find_feature('box_battle_1')
+
+    def run_for_5(self):
+        self.operate(lambda: self.do_run_for_5())
+
+    def do_run_for_5(self):
+        self.do_send_key_down('w')
+        self.sleep(0.1)
+        self.do_mouse_down(key='right')
+        self.sleep(0.1)
+        self.do_mouse_up(key='right')
+        self.sleep(5)
+        self.do_send_key_up('w')
+
+
 
 
