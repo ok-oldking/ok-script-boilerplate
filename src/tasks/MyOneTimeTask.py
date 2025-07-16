@@ -31,4 +31,10 @@ class MyOneTimeTask(BaseTask):
     def find_some_text_with_relative_box(self):
         return self.ocr(0.5, 0.5, 1, 1, match=re.compile("招"), log=True) #指定box以提高ocr速度
 
+    def test_find_one_feature(self):
+        return self.find_one('box_battle_1')
+
+    def test_find_feature_list(self):
+        return self.find_feature('box_battle_1')
+
 
