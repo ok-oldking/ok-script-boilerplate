@@ -1,5 +1,8 @@
 ### ok-script boilerplate
 
+### 开发者群
+938132715
+
 ### 使用方法
 ```
 pip install -r requirements.txt #必须使用 python 3.12
