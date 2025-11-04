@@ -6,7 +6,7 @@ ok-script模板项目, 用于fork后快速开始你的项目
 * [游戏自动化入门](https://github.com/ok-oldking/ok-script/blob/master/docs/intro_to_automation/README.md)
 * [快速开始](https://github.com/ok-oldking/ok-script/blob/master/docs/quick_start/README.md)
 * [进阶使用](https://github.com/ok-oldking/ok-script/blob/master/docs/after_quick_start/README.md)
-* [API文档](https://github.com/ok-oldking/ok-script/blob/master/docs/api/README.md)
+* [API文档](https://github.com/ok-oldking/ok-script/blob/master/docs/api_doc/README.md)
 * 开发者群: 938132715
 
 #### 文件说明
