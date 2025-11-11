@@ -1,7 +1,5 @@
 import re
 
-from ok import BaseTask
-
 from src.tasks.MyBaseTask import MyBaseTask
 
 

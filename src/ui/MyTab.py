@@ -8,7 +8,7 @@ from src.tasks.MyOneTimeTask import MyOneTimeTask
 
 
 class MyTab(CustomTab):
-#  可以使用https://github.com/zhiyiYo/PyQt-Fluent-Widgets 写自定义Tab
+#  可以使用https://github.com/zhiyiYo/PyQt-Fluent-Widgets 或PySide6 写自定义Tab
 
     def __init__(self):
         super().__init__()
