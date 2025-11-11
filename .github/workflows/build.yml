@@ -60,7 +60,7 @@ jobs:
 
       - name: Sync Repositories # 同步部分代码(deploy.txt中), 合并tag中间更新日志, 到更新库, 以减少用户更新使用的git库大小
         id: sync   # Give the step an ID to access its outputs
-        uses: ok-oldking/partial-sync-repo@master # Replace with your action path
+        uses: ok-oldking/partial-sync-repo@master
         with:
           repos: |
             https://ok-oldking:${{ secrets.OK_GH }}@github.com/ok-oldking/ok-boilerplate-update.git
