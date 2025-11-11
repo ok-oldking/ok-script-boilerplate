@@ -10,6 +10,3 @@ class Globals(QObject):
     def __init__(self, exit_event):
         super().__init__()
 
-
-if __name__ == "__main__":
-    glbs = Globals(exit_event=None)
